@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-[#0F172A] antialiased;
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  /* Gradient text using brand primary */
+  .gradient-text {
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Card style */
+  .brand-card {
+    @apply bg-white border border-slate-200 rounded-2xl shadow-sm;
+  }
+
+  /* Accent section background */
+  .section-accent {
+    background-color: #DBEAFE;
+  }
+
+  /* Primary button */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 font-semibold rounded-xl
+           px-6 py-3 text-white transition-all duration-200;
+    background-color: #2563EB;
+  }
+  .btn-primary:hover {
+    background-color: #1D4ED8;
+    @apply shadow-lg -translate-y-0.5;
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.35);
+  }
+
+  /* Outline button */
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 font-semibold rounded-xl
+           px-6 py-3 text-[#2563EB] border-2 border-[#2563EB] bg-white
+           transition-all duration-200;
+  }
+  .btn-outline:hover {
+    @apply bg-[#DBEAFE] -translate-y-0.5;
+  }
+}
